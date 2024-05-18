@@ -1,8 +1,9 @@
 package creational.factory;
 
-public class WordDocument implements Document {
+public class WordDocument extends DocumentFactory{
+
     @Override
     public void write() {
-        System.out.println("Word writed");
+        System.out.println("Word written");
     }
 }

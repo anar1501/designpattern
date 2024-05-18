@@ -1,8 +1,9 @@
 package creational.factory;
 
-public class PDFDocument implements Document {
+public class PDFDocument extends DocumentFactory {
+
     @Override
     public void write() {
-        System.out.println("PDF writed");
+        System.out.println("PDF written");
     }
 }

@@ -1,11 +1,25 @@
 package creational.factory;
 
-public class DocumentFactory {
-    public Document createDocument(DocumentType documentType) {
-        if (documentType.equals(DocumentType.PDF)) {
-            return new PDFDocument();
-        } else {
-            return new WordDocument();
-        }
+
+
+public abstract class DocumentFactory {
+    protected DocumentFactory() {
     }
+
+    public static DocumentFactory getInstance(DocumentType documentType) {
+        return createDocument(documentType);
+    }
+
+
+    public static DocumentFactory createDocument(DocumentType documentType) {
+        DocumentFactory doc = null;
+        doc = switch (documentType) {
+            case PDF -> new PDFDocument();
+            case WORD -> new WordDocument();
+            default -> null;
+        };
+        return doc;
+    }
+
+    public abstract void write();
 }

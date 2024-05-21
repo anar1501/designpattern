@@ -11,7 +11,7 @@ public class FooWrapper implements Foo {
     }
 
     @Override
-    public void foo() {
-        foo.foo();
+    public String foo() {
+        return foo.foo();
     }
 }

@@ -1,12 +1,14 @@
 package structural.facade.strategy;
 
-import structural.facade.ShopKeeper;
+import structural.facade.Iphone;
+import structural.facade.MobileShop;
 
 public class IphoneSale implements ShopKeeperStrategy {
-    ShopKeeper shopKeeper = new ShopKeeper();
+    private MobileShop iphone =new Iphone();
 
     @Override
     public void doOperation() {
-        shopKeeper.iphoneSale();
+        iphone.modelNo();
+        iphone.price();
     }
 }

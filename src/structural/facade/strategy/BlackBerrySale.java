@@ -1,12 +1,14 @@
 package structural.facade.strategy;
 
-import structural.facade.ShopKeeper;
+import structural.facade.Blackberry;
+import structural.facade.MobileShop;
 
 public class BlackBerrySale implements ShopKeeperStrategy {
-    ShopKeeper shopKeeper;
+    private MobileShop blackberrySale=new Blackberry();
 
     @Override
     public void doOperation() {
-        shopKeeper.blackberrySale();
+        blackberrySale.modelNo();
+        blackberrySale.price();
     }
 }

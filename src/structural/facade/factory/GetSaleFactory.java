@@ -6,12 +6,12 @@ import structural.facade.strategy.IphoneSale;
 import structural.facade.strategy.SamsungSale;
 import structural.facade.strategy.ShopKeeperStrategy;
 
-public class GetPhoneFactory {
+public class GetSaleFactory {
     IphoneSale iphone;
     SamsungSale samsung;
     BlackBerrySale blackberry;
 
-    public ShopKeeperStrategy getPhone(PhoneType phoneType) {
+    public ShopKeeperStrategy getSale(PhoneType phoneType) {
         return switch (phoneType) {
             case IPHONE -> new IphoneSale();
             case SAMSUNG -> new SamsungSale();

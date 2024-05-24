@@ -8,9 +8,9 @@ public abstract class ObjectCreatingFactory {
     public static Object getInstance(ObjectType objectType) {
         try {
             String className = objectType.getObjectClassPath();
-            Class<?> productClass = Class.forName(className);
-            Constructor<?> constructor = productClass.getConstructor();
-            return (Object) constructor.newInstance();
+            Class<?> getObject = Class.forName(className);
+            Constructor<?> constructor = getObject.getConstructor();
+            return constructor.newInstance();
         } catch (Exception e) {
             e.printStackTrace();
             return null;

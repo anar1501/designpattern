@@ -1,10 +1,10 @@
 package creational.factory;
 
-import static creational.factory.DocumentType.PDF;
+import static creational.factory.ObjectType.Object_A;
 
 public class Main {
     public static void main(String[] args) {
-        DocumentFactory factory = DocumentFactory.getInstance(PDF);
-        factory.write();
+        Object instance = ObjectCreatingFactory.getInstance(Object_A);
+        System.out.println(instance.hashCode());
     }
 }

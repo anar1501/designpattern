@@ -1,7 +1,5 @@
 package creational.abstractfactory;
 
-import javax.xml.crypto.Data;
-
 public class OracleSql implements Database {
     @Override
     public void select() {

@@ -1,6 +1,6 @@
 package creational.abstractfactory;
 
-public class TelecomFactory extends ITCompanyFactory {
+public class TelecomFactory implements ITCompanyFactory {
     @Override
     public Developer getDeveloper() {
         return new JavaDeveloper();

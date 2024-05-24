@@ -1,6 +1,6 @@
 package creational.abstractfactory;
 
-public class BankingFactory extends ITCompanyFactory {
+public class BankingFactory implements ITCompanyFactory {
     @Override
     public Developer getDeveloper() {
         return new PythonDeveloper();
